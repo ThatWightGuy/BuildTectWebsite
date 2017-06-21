@@ -1,42 +1,214 @@
-a {
-	color: green;
-	text-decoration:none;
+html{
+	background-color: white;
 }
-a:hover {
-	color:lightgreen;
+body{
+	padding: 0;
+	margin: 0;
+	font-family: Helvetica,Arial;
 }
-ul {
+
+/*----- Navigation -----*/
+
+.navigation{
+	margin: auto;
+	padding: 0;
 	overflow: hidden;
-}
-li {
-	float: left;
-	padding: 10px;
-	display: block;
-}
-#shrek {  
-	padding: 20px;			
-	border: 10px solid green;
-}
-#shrek-pictures {
-	width: 50%;	
-	margin: 10px auto;
-}
-#ShrekTheTable {
-	width: 100%;
-	border-spacing:10%;
-}
-#ShrekTheTable td {
-	padding: 10px;
+	list-style: none;
+	background-color: #333;
 	text-align: center;
+	width: 100%;
+	z-index: 3;
+	border-bottom: 1px solid black;
 }
-#ShrekTheTable tr:nth-child(even) {
-	background-color: green;
+.logo {
+	float: left;
 }
-#ShrekTheTable tr:nth-child(odd) {
-	background-color: lightgreen;
+.logo a{
+	display: block;
+	margin: 0;
+	padding: 12px 0px;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-decoration: none;
+	color: white;
+	font-size: 19px;
+	font-family: Helvetica,Arial; 
 }
-#ShrekID{
-	background-color: lightgreen;
-	font-size: 14px;
-	font-weight: bolder;
+.build{
+	/*color: #0698FF;*/
+	color: white;
 }
+.tect{
+	color: black;
+	background-color: lightgrey;
+	border-radius: 3px;
+}
+.logo a:hover{
+	transition: .25s;
+}
+
+/* for desktop or landscape */
+@media only screen and (orientation: landscape){
+	.nav_item{
+		float: right;
+	}
+	.nav_item .nav{
+		display: inline-block;
+		text-decoration: none;
+		padding: 14px 13px;
+		font-family: Helvetica,Arial;
+		color: white;
+		background-color: grey;
+	}
+	.nav_item .nav:hover{
+		transition: .25s;
+		background-color: lightgrey;
+		color: black;
+	}
+	.bars{
+		display: none;
+	}
+}
+
+/* for mobile or vertical screens */
+@media only screen and (orientation: portrait){
+	.nav_item{
+		float: right;
+	}
+	.nav_item .nav{
+		display: inline-block;
+		text-decoration: none;
+		padding: 14px 13px;
+		font-family: Helvetica,Arial;
+		color: white;
+		background-color: grey;
+	}
+	.nav_item .nav:hover, .bars:hover .barbuttn{
+		transition: .25s;
+		background-color:lightgrey;
+		color: black;
+	}
+	.dropdown{
+		display: none;
+		position: absolute;
+		right:0;
+		background-color: grey;
+		width: 100%;
+		z-index: 1;
+		border-left: 1px solid black;
+		border-bottom: 1px solid black;
+	}
+	.dropdown a{
+		color:white;
+		padding: 14px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: center;
+	}
+	.dropdown a:hover{
+		transition: .25s;
+		background-color: lightgrey;
+		color: black;
+	}
+	.bars:hover .dropdown{
+		transition: .5s;
+		display: block;
+	}
+	#home, #about, #contact{
+		display: none;
+	}
+}
+
+/*----- index -----*/
+
+.curtain{
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	box-sizing: border-box;
+	background-image: url(../images/pool.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+[class*="col-"]{
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+.col-1 {
+	width: 16.66%;
+}
+.col-title {
+	width: 66.64%;
+	text-align: center;
+	font-size: 30px;
+	align-items: center;
+	margin: auto;
+}
+.title a{
+	display: block;
+	text-decoration: none;
+	font-weight: 400;
+	left:25%;
+	padding: 0px 20px;
+	color: white;
+}
+.col-9 {
+	width: 16.66%;
+}
+.curtain_footer{
+	position: absolute;
+	bottom: 0;
+	left: 49%;
+	z-index: 1;
+	padding: 2px;
+	font-size: 30px;
+}
+.curtain_footer a{
+	text-decoration: none;
+	color: white;
+	opacity: .7;
+}
+.curtain_footer a:hover{
+	transition: .25s;
+	opacity: 1;
+}
+.curtain_footer:hover{
+	transform: scale(1.2,1.2);
+}
+/*.tooltip{
+	position: relative;
+	display: inline-block;
+	margin: 20px;
+}
+.tooltip .tooltiptext{
+	visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color:#fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 7px;
+	position: absolute;
+	z-index: 1;
+	top: 150%;
+	left: 50%;
+	margin-left: -60px;
+}
+.tooltip .tooltiptext::after{
+	content: " ";
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent black transparent;
+}
+.tooltip:hover .tooltiptext{
+	visibility: visible;
+}*/
+
+/*77760*/
