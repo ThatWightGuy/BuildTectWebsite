@@ -8,7 +8,6 @@ body{
 }
 
 /*----- Navigation -----*/
-
 .navigation{
 	position: fixed;
 	margin: auto;
@@ -45,7 +44,8 @@ body{
 		padding: 14px 13px;
 		font-family: Helvetica,Arial;
 		color: white;
-		opacity: .7;
+		mix-blend-mode: difference;
+		opacity: .8;
 	}
 	.nav_item .nav:hover{
 		transition: .25s;
@@ -68,7 +68,7 @@ body{
 		padding: 14px 13px;
 		font-family: Helvetica,Arial;
 		color: white;
-		opacity: .7;
+		opacity: .8;
 	}
 	.nav_item .nav:hover, .bars:hover .barbuttn{
 		transition: .25s;
@@ -88,7 +88,7 @@ body{
 		text-decoration: none;
 		display: block;
 		text-align: right;
-		opacity: .7;
+		opacity: .8;
 	}
 	.dropdown a:hover{
 		transition: .25s;
@@ -161,7 +161,7 @@ body{
 .curtain_footer a{
 	text-decoration: none;
 	color: white;
-	opacity: .7;
+	opacity: .8;
 }
 .curtain_footer a:hover{
 	transition: .25s;
