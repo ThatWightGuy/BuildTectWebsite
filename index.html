@@ -10,21 +10,21 @@
 	<link rel="shortcut icon" href="images/Logo.png">
 </head>
 <body>
-	<!-- Navigation -->
+	<!-- Navigation (copied onto multiple pages)-->
 	<ul class="navigation" id="navigation">
 		<li class="nav_item bars">
 			<a class="nav barbuttn" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
 			<div class="dropdown">
-				<a href="#">home</a>
+				<a href="#curtain">home</a>
+				<a href="#about_page">about</a>
 				<a href="#">contact</a>
-				<a href="#">about</a>
 			</div>
 		</li>
 		<li class="nav_item" id="contact">
 			<a class="nav" href="#">contact</a>
 		</li>
 		<li class="nav_item" id="about">
-			<a href="#" class="nav">about</a>
+			<a href="#about_page" class="nav">about</a>
 		</li>
 		<li class="nav_item" id="home">
 			<a href="#curtain" class="nav">home</a>
@@ -38,7 +38,7 @@
 
 	<!-- Curtain -->
 	<div class="curtain_footer">
-		<a href="#main"><i class="fa fa-angle-double-down"></i></a>
+		<a href="#about_page"><i class="fa fa-angle-double-down"></i></a>
 	</div>
 	<div class="curtain" id="curtain">
 		<div class="col-1"></div>
@@ -48,9 +48,28 @@
 		<div class="col-9"></div>
 	</div>
 
-	<!-- Main -->
-	<div class="main" id="main">
+	<!-- about -->
+	<div class="about" id="about_page">
+		<!--<div class="construction">
+			<h1>Under Construction</h1>
+			<table class="information">
+				<tr>
+					<th>Phone</th>
+					<td>818-894-5335</td>
+				</tr>
+				<tr>
+					<th>Email</th>
+					<td>dean.btdesigns11@yahoo.com</td>
+				</tr>
+			</table>
+		</div>-->
 		
+		<h1 class="about_header">about us</h1>
+		<ul class="about_nav">
+			<li class="about_nav_item"><a href="" class="about_link">who?</a></li>
+			<li class="about_nav_item"><a href="" class="about_link">what?</a></li>
+			<li class="about_nav_item"><a href="" class="about_link">projects</a></li>
+		</ul>
 	</div>
 </body>
 </html>
