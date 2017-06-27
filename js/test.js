@@ -1,4 +1,3 @@
-var a = 5;
-
-console.log(a);
-
+//javascript practice
+var string = "banana, phone, time, warp, destroy, build, apple, matt, damon, robin, williams, star, wars"
+console.log();

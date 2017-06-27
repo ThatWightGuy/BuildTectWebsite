@@ -236,8 +236,7 @@ body{
 }
 .about_nav_item .about_link:hover{
 	transition: .25s; 
-	color: #0698FF;
-	transform: scale(1.2,1.2);
+	transform: scale(1.1,1.1);
 }
 
 /*.tooltip{
