@@ -37,27 +37,6 @@
 	<link rel="shortcut icon" href="images/Logo.png">
 </head>
 <body>
-	<!-- Navigation (copied onto multiple pages)-->
-	<ul class="navigation" id="navigation">
-		<li class="nav_item bars">
-			<a class="nav barbuttn" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
-			<div class="dropdown">
-				<a href="#curtain">home</a>
-				<a href="#about_page">about</a>
-				<a href="#">contact</a>
-			</div>
-		</li>
-		<li class="nav_item" id="contact">
-			<a class="nav" href="#">contact</a>
-		</li>
-		<li class="nav_item" id="about">
-			<a href="#about_page" class="nav">about</a>
-		</li>
-		<li class="nav_item" id="home">
-			<a href="#curtain" class="nav">home</a>
-		</li>
-	</ul>
-
 	<!--<div class="tooltip">
 		Hover over me
 		<span class="tooltiptext">TOOL TIP TEXT</span>
@@ -71,6 +50,17 @@
 		<div class="col-1"></div>
 		<div class="col-title">
 			<h1 class="title" id="title"><a href="#curtain"><span class="build">build</span><span class="tect">tect</span></a></h1>
+			<ul class="navigation" id="navigation">
+				<li class="nav_item" id="about">
+					<a class="nav" href="#about_page">about</a>
+				</li>
+				<li class="nav_item" id="projects">
+					<a href="#projects_page" class="nav">projects</a>
+				</li>
+				<li class="nav_item" id="contact">
+					<a href="#contact_page" class="nav">contact</a>
+				</li>
+			</ul>
 		</div>
 		<div class="col-9"></div>
 	</div>
@@ -91,50 +81,33 @@
 			</table>
 		</div>-->
 		<!--<h1 class="about_header">about<span class="tect">us</span></h1>-->
-		<div class="about_items_container">
-			<div class="about_item" id="what">
-				<!-- markup for landscape -->
-				<div class="about_inner_item about_item_header">
-					<h1>about <span class="tect">us</span></h1>
-				</div>
-				<div class="about_inner_item about_item_top">
-					
-				</div>
-				<div class="about_inner_item about_item_bottom">
-					
-				</div>
-				<!-- markup for portrait -->
-				<!-- TODO -->
+		<div class="about_content">
+			<div class="ac_left ac_white_box">
+				
 			</div>
-			<div class="about_item" id="who">
-				<!-- markup for landscape -->
-				<div class="about_inner_item about_item_header">
-					<h1>our <span class="tect">team</span></h1>
-				</div>
-				<div class=" about_inner_item about_item_top">
-					<img class="dean_image" src="images/Dean_Face.jpg">
-				</div>
-				<div class="about_inner_item about_item_bottom">
-					
-				</div>
-				<!-- markup for portrait -->
-				<!-- TODO -->
+			<div class="ac_right ac_grey_box">
+				
 			</div>
-			<div class="about_item" id="projects">
-				<!-- markup for landscape -->
-				<div class="about_inner_item about_item_header">
-					<h1>our <span class="tect">work</span></h1>
-				</div>
-				<div class="about_inner_item about_item_top">
-					
-				</div>
-				<div class="about_inner_item about_item_bottom">
-					
-				</div>
-				<!-- markup for portrait -->
-				<!-- TODO -->
+		</div>
+		<div class="about_content">
+			<div class="ac_left ac_grey_box">
+				
+			</div>
+			<div class="ac_right ac_white_box">
+				
 			</div>
 		</div>
 	</div>
+
+	<!-- projects -->
+	<div class="projects" id="projects_page">
+		
+	</div>
+
+	<!-- contact -->
+	<div class="contact" id="contact_page">
+		
+	</div>
+
 </body>
 </html>
