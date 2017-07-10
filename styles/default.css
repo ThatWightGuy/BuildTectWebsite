@@ -1,17 +1,40 @@
 html{
-	/*background-image: url(../images/pool-min.jpg);*/
-	background-color: grey;
-	background-size: cover;
-	background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
+	background-color: white;
 }
 body{
 	padding: 0;
 	margin: 0;
 	font-family: Helvetica,Arial;
 }
-
+.navigation{
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 60px;
+	background-color: black;
+	z-index: 3;
+}
+.navbar{
+	padding: 0;
+	margin: auto;
+	list-style: none;
+}
+.navbar .navitem{
+	padding: 0 30px;
+	display: inline-block;
+	color: white;
+}
+.navbar .navitem a{
+	color: white;
+	text-decoration: none;
+}
+.navbar .navitem a:hover{
+	transition: .25s;
+	color: #0698FF;
+}
+.navbar .navitem a:not(hover){
+	transition: .25s;
+}
 .curtain{
 	display: flex;
 	width: 100%;
@@ -30,7 +53,6 @@ body{
 .col-title {
 	width: 80%;
 	text-align: center;
-	font-size: 30px;
 	align-items: center;
 	margin: auto;
 }
@@ -51,7 +73,7 @@ body{
 .col-9 {
 	width: 10%;
 }
-.curtain_footer{
+.footer{
 	position: absolute;
 	bottom: 0;
 	left: 49%;
@@ -59,60 +81,22 @@ body{
 	padding: 2px;
 	font-size: 30px;
 }
-.curtain_footer a{
+.footer a{
 	text-decoration: none;
-	color: white;
+	color: black;
 }
-.curtain_footer:hover{
+.footer:hover{
 	transition: .5s;
 	transform: scale(1.3,1.3);
 	color: #0698FF;
 }
-.curtain_footer:not(hover){
+.footer:not(hover){
 	transition: .5s;
 	transform: scale(1,1);
-	color: white;
-}
-.navigation{
-	position: relative;
-	top: -46px;
-	text-align: center;
-	margin: auto;
-	padding: 0;
-	overflow: visible;
-	list-style: none;
-	text-align: center;
-	z-index: 3;
-
 }
 .build{
 	/*color: #0698FF;*/
-	color: white;
-}
-/* for desktop  */
-/* default */
-.nav_item{
-	position: relative;
-	display: inline-block;
-	margin: auto;
-}
-.nav_item .nav{
-	display: inline-block;
-	text-decoration: none;
-	font-family: Helvetica,Arial;
-	color: white;
-	padding: 10px 15px;
-	font-size: 20px;
-}
-.nav_item .nav:hover{
-	transition: .25s;
-	transform: scale(1.2,1.2);
-	color: #0698FF;
-}
-.nav_item .nav:not(hover){
-	transition: .25s;
-	transform: scale(1,1);
-	color: white;
+	color: black;
 }
 #projects{
 	border-right: 1px solid white;
@@ -126,82 +110,164 @@ body{
 }
 
 /*--- after curtain ---*/
-
+/*--- about page ---*/
 .about{
 	position: relative;
+	display: flex;
+	flex-direction: row;
 	width: 100%;
+	height: 100vh;
+	background-image: url(../images/About_Dean.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.about_content_left{
+	display: flex;
+	position: relative;
+	width: 60%;
 	height: 100vh;
 }
 .about_content{
-	width: 100%;
-	height: 50vh;
-	display: flex;
-	flex-direction: row;
-}
-.ac_left{
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	width: 50%;
-}
-.ac_right{
-	display: flex;
-	height: 100%;
-	width: 50%;
-}
-.ac_grey_box{
-	background-color: lightgrey;
-}
-.ac_white_box{
+	margin: auto;
+	width: 40vw;
+	height: 80vh;
 	background-color: white;
 }
-#about_us{
+.about_navigation{
 	position: relative;
-	text-align: center;
-}
-.ac_left_inside.ac_header{
 	display: flex;
-	height: 20%;
+	margin: 0;
+	width: 100%;
+	height: 60px;
+	background-color: black;
 }
-.ac_left_inside.ac_text{
+.about_navbar{
+	margin: auto;
+	padding: 0;
+	list-style: none;
+}
+.about_navbar .about_navitem{
+	display: inline;
+	padding: 0 25px;
+}
+.about_navbar .about_navitem button{
+	text-decoration: none;
+	border: none;
+	background-color: transparent;
+	color: white;
+	outline: none;
+	font-size: 16px;
+}
+.about_navbar .about_navitem button:focus{
+	color: #0698FF;
+}
+.about_navbar .about_navitem button:not(focus),
+.about_navbar .about_navitem button:not(hover){
+	transition: .25s;
+}
+.about_navbar .about_navitem button:hover{
+	transition: .25s;
+	color: #0698FF;
+}
+.about_blurb{
+	position: relative;
 	display: flex;
-	height: 80%;
+	width: 100%;
+	height: 72.18vh;
+	overflow: scroll;
 }
-#about_us h1{
+.about_blurb p{
 	margin: auto;
-	font-size: 40px;
+	line-height: 1.5;
+	padding: 20px;
 }
-#about_us p{
-	margin: auto;
-	padding: 0 20px;
-	font-size: 20px;
+#about_footer{
+	color: white;
 }
-.ac_right img{
-	margin: auto;
-	width: 300px;
-	height: 300px;
-	border-radius: 100%;
-}
-/* responsive breakpoints*/
 
+/*--- projects page ---*/
+.projects{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	background-color: white;
+}
+.projects h1{
+	text-align: center;
+	margin: auto;
+}
+
+/*--- contact page ---*/
+.contact{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	background-color: white;
+}
+.contact h1{
+	text-align: center;
+	margin: auto;
+}
+
+/* responsive breakpoints*/
 /* smallest */
 @media only screen 
 and (max-width: 240px){
-
+	.title a{
+		display: block;
+		text-decoration: none;
+		font-weight: 400;
+		left: 25%;
+		color: white;
+		font-size: 70px;
+	}
+	.navbar .navitem{
+		padding: 0 20px;
+		display: inline-block;
+		color: white;
+	}
 }
 
 /* small */
 @media only screen 
 and (min-width: 240px)
 and (max-width: 320px){
-
+	.title a{
+		display: block;
+		text-decoration: none;
+		font-weight: 400;
+		left: 25%;
+		color: white;
+		font-size: 70px;
+	}
+	.navbar .navitem{
+		padding: 0 20px;
+		display: inline-block;
+		color: white;
+	}
 }
 
 /* phones */
 @media only screen 
 and (min-width: 320px)
 and (max-width: 480px){
-	
+	.title a{
+		display: block;
+		text-decoration: none;
+		font-weight: 400;
+		left: 25%;
+		color: white;
+		font-size: 70px;
+	}
+	.navbar .navitem{
+		padding: 0 20px;
+		display: inline-block;
+		color: white;
+	}
 }
 
 @media only screen 
@@ -214,13 +280,89 @@ and (max-width: 600px){
 @media only screen 
 and (min-width: 600px)
 and (max-width: 720px){
-	
+	.about_content_left{
+		display: flex;
+		position: relative;
+		width: 45%;
+		height: 100vh;
+	}
+	.about_content_right{
+		position: relative;
+		height: 100vh;
+		width: 55%;
+		background-image: url(../images/About_Dean2.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+	    background-attachment: fixed;
+	    background-position: center; 
+	}
+	.about_content{
+		margin: auto;
+		width: 100%;
+		height: 100vh;
+		background-color: white;
+	}
+	.about_blurb{
+		position: relative;
+		display: flex;
+		width: 100%;
+		height: 92.21vh;
+		overflow: scroll;
+	}
+	.about_blurb p{
+		margin: auto;
+		line-height: 1.5;
+		padding: 20px;
+	}
+	.about_navbar .about_navitem{
+		display: inline;
+		padding: 0 20px;
+	}
+	#about_footer{
+		color: black;
+	}	
 }
 
 @media only screen 
 and (min-width: 720px)
 and (max-width: 800px){
-	
+	.about_content_left{
+		display: flex;
+		position: relative;
+		width: 45%;
+		height: 100vh;
+	}
+	.about_content_right{
+		position: relative;
+		height: 100vh;
+		width: 55%;
+		background-image: url(../images/About_Dean2.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+	    background-attachment: fixed;
+	    background-position: center; 
+	}
+	.about_content{
+		margin: auto;
+		width: 100%;
+		height: 100vh;
+		background-color: white;
+	}
+	.about_blurb{
+		position: relative;
+		display: flex;
+		width: 100%;
+		height: 92.21vh;
+		overflow: scroll;
+	}
+	.about_blurb p{
+		margin: auto;
+		line-height: 1.5;
+		padding: 20px;
+	}
+	#about_footer{
+		color: black;
+	}	
 }
 
 /* tablets/laptops */
@@ -228,16 +370,54 @@ and (max-width: 800px){
 @media only screen 
 and (min-width: 800px)
 and (max-width: 1024px){
-
+	.about_content_left{
+		display: flex;
+		position: relative;
+		width: 45%;
+		height: 100vh;
+	}
+	.about_content_right{
+		position: relative;
+		height: 100vh;
+		width: 55%;
+		background-image: url(../images/About_Dean2.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+	    background-attachment: fixed;
+	    background-position: center; 
+	}
+	.about_content{
+		margin: auto;
+		width: 100%;
+		height: 100vh;
+		background-color: white;
+	}
+	.about_blurb{
+		position: relative;
+		display: flex;
+		width: 100%;
+		height: 92.21vh;
+		overflow: scroll;
+	}
+	.about_blurb p{
+		margin: auto;
+		line-height: 1.5;
+		padding: 20px;
+	}
+	#about_footer{
+		color: black;
+	}	
 }
 
 @media only screen 
 and (min-width: 1024px)
+and (max-width: 1280px){
 
 }
 
 /* desktops+ */
 
+@media only screen 
 and (min-width: 1280px){
 	
 }
