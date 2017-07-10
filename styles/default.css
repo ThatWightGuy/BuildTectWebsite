@@ -1,6 +1,6 @@
 html{
 	/*background-image: url(../images/pool-min.jpg);*/
-	background-color: lightgrey;
+	background-color: grey;
 	background-size: cover;
 	background-repeat: no-repeat;
     background-attachment: fixed;
@@ -63,12 +63,15 @@ body{
 	text-decoration: none;
 	color: white;
 }
-.curtain_footer a:hover{
-	transition: .25s;
-}
 .curtain_footer:hover{
-	transition: .25s;
+	transition: .5s;
 	transform: scale(1.3,1.3);
+	color: #0698FF;
+}
+.curtain_footer:not(hover){
+	transition: .5s;
+	transform: scale(1,1);
+	color: white;
 }
 .navigation{
 	position: relative;
@@ -121,7 +124,8 @@ body{
 #contact a{
 	padding-left: 5px;
 }
-/*--- after curtain (landscape) ---*/
+
+/*--- after curtain ---*/
 
 .about{
 	position: relative;
@@ -135,56 +139,108 @@ body{
 	flex-direction: row;
 }
 .ac_left{
+	display: flex;
+	flex-direction: column;
 	height: 100%;
 	width: 50%;
 }
 .ac_right{
+	display: flex;
 	height: 100%;
 	width: 50%;
 }
 .ac_grey_box{
-	background-color: grey;
+	background-color: lightgrey;
 }
 .ac_white_box{
 	background-color: white;
 }
-
-/* for or vertical desktop */
-@media only screen 
-and (max-width:1030px){
-
+#about_us{
+	position: relative;
+	text-align: center;
 }
-
-/*----- about -----*/
-
-/* will eventually delete this section (beginning)*/
-.construction{
-	position: absolute;
-	height: 320px;
-	width: 320px;
-	padding: 0;
+.ac_left_inside.ac_header{
+	display: flex;
+	height: 20%;
+}
+.ac_left_inside.ac_text{
+	display: flex;
+	height: 80%;
+}
+#about_us h1{
 	margin: auto;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
+	font-size: 40px;
 }
-.construction h1{
-	text-align: center;
-	color: white;
-	font-size: 50px;
-	padding-top: 0px;
-	padding-bottom: 25px;
-	border-bottom: 1px solid white;
+#about_us p{
+	margin: auto;
+	padding: 0 20px;
+	font-size: 20px;
 }
-.construction .information{
-	text-align: center;
-	width: 320px;
-	padding: 0;
-	margin-right: auto;
-	margin-left: auto;
+.ac_right img{
+	margin: auto;
+	width: 300px;
+	height: 300px;
+	border-radius: 100%;
 }
-/* will eventually delete this section (end) */
+/* responsive breakpoints*/
+
+/* smallest */
+@media only screen 
+and (max-width: 240px){
+
+}
+
+/* small */
+@media only screen 
+and (min-width: 240px)
+and (max-width: 320px){
+
+}
+
+/* phones */
+@media only screen 
+and (min-width: 320px)
+and (max-width: 480px){
+	
+}
+
+@media only screen 
+and (min-width: 480px)
+and (max-width: 600px){
+	
+}
+
+/* tablets */
+@media only screen 
+and (min-width: 600px)
+and (max-width: 720px){
+	
+}
+
+@media only screen 
+and (min-width: 720px)
+and (max-width: 800px){
+	
+}
+
+/* tablets/laptops */
+
+@media only screen 
+and (min-width: 800px)
+and (max-width: 1024px){
+
+}
+
+@media only screen 
+and (min-width: 1024px)
+
+}
+
+/* desktops+ */
+
+and (min-width: 1280px){
+	
+}
 
 /*.tooltip{
 	position: relative;
