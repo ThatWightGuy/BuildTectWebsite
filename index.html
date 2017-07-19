@@ -16,12 +16,7 @@
 		<link rel="shortcut icon" href="images/Logo.png">
 	</head>
 	<body>
-		<!--<div class="tooltip">
-			Hover over me
-			<span class="tooltiptext">TOOL TIP TEXT</span>
-		</div>-->
-
-		<!-- Curtain -->
+		<!-- Home Section -->
 		<div class="home">
 			<div class="navigation">
 				<ul class="navbar">
@@ -30,24 +25,89 @@
 					<li class="navitem"><a href="#contact_section">contact</a></li>
 				</ul>
 			</div>
-			<div class="curtain" id="curtain">
-				<div class="col-1"></div>
-				<div class="col-title">
-					<h1 class="title" id="title"><a href="#home"><span class="build">build</span><span class="tect">tect</span></a></h1>
-				</div>
-				<div class="col-9"></div>
-			</div>
-		</div>
-		<div class="about">
-			<div class="about_content" id="about_picture_gallery">
-				<h1>photo gallery coming soon</h1>
-			</div>
-			<div class="about_content" id="about_us">
-				<div class="about_content_blurb" id="about_blurb">
-					<h1>About <span class="tect">Us</span></h1>
-					<p>At Build <span class="tect">Tect</span> Building Desgins, we specialize in designing new homes, remodels and additions, and tenant improvements in the Southern California Area.</p>
+			<div class="title">
+				<div class="title_contents">
+					<img src="images/Logo.png">
+					<h1>build<span class="tect">tect</span></h1>
 				</div>
 			</div>
 		</div>
+		<!-- About Section -->
+		<div class="about" id="about_us">
+			<div class="parallax_content" id="about_parallax">
+				<div class="coming_soon">
+					<h1>coming soon</h1>
+				</div>
+				<div class="overlay_div"><!-- blank div --></div>
+				<h1 class="parallax_header">about <span class="tect">us</span></h1>
+			</div>
+			<div class="about_content" id="about_container">
+				<!-- TODO -->
+			</div>
+		</div>
+		<!-- Portfolio Section -->
+		<div class="portfolio" id="portfolio_section">
+			<div class="parallax_content" id="portfollio_parallax">
+				<div class="coming_soon">
+					<h1>coming soon</h1>
+				</div>
+				<div class="overlay_div"><!-- blank div --></div>
+				<h1 class="parallax_header">port<span class="tect">follio</span></h1>
+			</div>
+			<div class="portfollio_content" id="portfollio_container">
+				<!-- TODO -->
+			</div>
+		</div>
+		<!-- Contact Section -->
+		<div class="contact" id="contact_section">
+			<div class="parallax_content" id="contact_parallax">
+				<div class="overlay_div"><!-- blank div --></div>
+				<h1 class="parallax_header">contact <span class="tect">us</span></h1>
+			</div>
+			<div class="contact_content" id="contact_container">
+				<div class="cc_content" id="c_info">
+					<div class="contact_info_container">
+						<img src="images/Logo.png">
+						<div class="c_info_container">
+							<h5><strong>Phone:</strong> <span class="tect">818</span>-894-5335</h5>
+							<h5><strong>Email:</strong> <span class="tect">dean.btdesigns11</span>@yahoo.com</h5>
+							<h5><strong>Adress:</strong> <span class="tect">9707</span> Woodley Ave. <span class="tect">Northridge</span>, CA. 91343</h5>
+						</div>
+					</div>
+				</div>
+				<div class="cc_content" id="c_map">
+					<script type="text/javascript">
+						function myMap(){
+							var latlang = {
+								lat: 34.2466656,
+								lng: -118.4853342
+							};
+							var mapOptions = {
+							    zoom: 18,
+							    center: latlang,
+							    mapTypeId: google.maps.MapTypeId.ROADMAP,
+							    scrollwheel:false
+							};
+							var map = new google.maps.Map(document.getElementById("c_map"), mapOptions);
+							var marker = new google.maps.Marker({
+								position: latlang,
+							    map: map,
+							    title: 'Hello World!'
+							});
+							marker.setMap(map);
+							google.maps.event.addDomListener(window, "resize", function() {
+							    var center = map.getCenter();
+							    google.maps.event.trigger(map, "resize");
+							    map.setCenter(center);
+							});
+						}
+					</script>
+					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN_pPnaLKsSvCnojh3l4xsDRUehtWEDSA&callback=myMap"></script>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<h5>Build Tect Building Designs - Website designed by Travis Wight</h5>
+		</footer>
 	</body>
 </html>
