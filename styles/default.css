@@ -58,8 +58,8 @@ body{
 	display: flex;
 	flex-direction: column;
 	margin: auto;
-	width: 300px;
-	height: 400px;
+	width: 40vh;
+	height: 50vh;
 }
 .title_contents img{
 	width: 80%;
@@ -71,7 +71,7 @@ body{
 	margin: 13px auto;
 	text-align: center;
 	font-weight: 300;
-	font-size: 80px;
+	font-size: 10vh;
 }
 .parallax_content{
 	position: relative;
@@ -108,7 +108,7 @@ body{
 	z-index: 3;
 	color: white;
 }
-.coming_soon h1{
+.coming_soon_h1{
 	margin: auto;
 	font-size: 60px;
 	font-weight: 300;
@@ -117,7 +117,7 @@ body{
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(0,0,0,.2);
+	background-color: rgba(0,0,0,.35);
 }
 .about{
 	width: 100%;
@@ -128,21 +128,65 @@ body{
 	display: flex;
 	width: 100%;
 }
+#about_container{
+	flex-direction: column;
+	height: auto;
+	min-height: 700px;
+	background-color: white;
+}
+.ac_content{
+	position: relative;
+	display: flex;
+	height: auto;
+	min-height: 600px;
+}
+.about_footer{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	height: auto;
+	min-height: 100px;
+	background-color: black;
+}
+.af_box{
+	display: flex;
+	flex-direction: column;
+	width: 25%;
+	height: 80px;
+	padding: 20px 0;
+	margin: auto;
+	color: white;
+}
+.af_box h1{
+	font-weight: 400;
+	margin: auto;
+}
 #about_parallax{
-	background-image: url(../images/outside_landscape.jpg);
+	background-image: url(../images/Work1.JPG);
 }
 .about_h1_link{
 	text-decoration: none;
 }
 .about_h1_link:hover{
 	transition: .25s;
-	color: white;
+	color: #0698FF;
 }
-#portfollio_parallax{
-	background-image: url(../images/Work1.JPG);
+#portfolio_parallax{
+	background-image: url(../images/Work4.JPG);
+}
+.portfolio_content{
+	position: relative;
+	display: flex;
+	width: 100%;
+}
+#portfolio_container{
+	flex-direction: column;
+	height: auto;
+	min-height: 700px;
+	background-color: white;
 }
 #contact_parallax{
-	background-image: url(../images/Contact2.png);
+	background-image: url(../images/Work3.JPG);
 }
 .contact_content{
 	position: relative;
@@ -202,6 +246,15 @@ footer h5{
 	font-weight: 300;
 }
 /* responsive breakpoints*/
+@media only screen 
+and (max-width: 500px){
+	.about_footer{
+		flex-direction: column;
+	}
+	.af_box{
+		width: 100%;
+	}
+}
 
 @media only screen 
 and (max-width: 700px){
