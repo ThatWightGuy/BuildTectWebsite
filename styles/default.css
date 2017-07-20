@@ -5,7 +5,7 @@ html{
 body{
 	padding: 0;
 	margin: 0;
-	font-family: Helvetica,Arial;
+	font-family: sans-serif;
 }
 .home{
 	position: relative;
@@ -137,8 +137,32 @@ body{
 .ac_content{
 	position: relative;
 	display: flex;
+	flex-direction: column;
 	height: auto;
 	min-height: 600px;
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+}
+.about_h1_container{
+	position: relative;
+	display: flex;
+	height: auto;
+	min-height: 250px;
+}
+.about_h1{
+	text-align: center;
+	margin: auto;
+	font-weight: 300;
+	font-size: 31px;
+	padding: 40px;
+}
+.about_dean{
+	position: relative;
+	height: auto;
+	min-height: 600px;
+	width: 100%;
+	background-color: grey;
 }
 .about_footer{
 	position: relative;
@@ -147,6 +171,7 @@ body{
 	height: auto;
 	min-height: 100px;
 	background-color: black;
+	bottom: 0;
 }
 .af_box{
 	display: flex;
@@ -169,7 +194,10 @@ body{
 }
 .about_h1_link:hover{
 	transition: .25s;
-	color: #0698FF;
+	color: black;
+}
+.about_h1_link:not(hover){
+	transition: .25s;
 }
 #portfolio_parallax{
 	background-image: url(../images/Work4.JPG);
