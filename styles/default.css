@@ -32,6 +32,7 @@ body{
 	padding: 21px 30px;
 	color: white;
 	text-decoration: none;
+	font-weight: 300;
 }
 .navbar .navitem a:hover{
 	transition: .25s;
@@ -157,12 +158,34 @@ body{
 	font-size: 31px;
 	padding: 40px;
 }
-.about_dean{
+.about_bt{
 	position: relative;
+	display: flex;
 	height: auto;
-	min-height: 600px;
+	-webkit-flex-flow: row wrap;
+	min-height: 700px;
 	width: 100%;
 	background-color: grey;
+}
+.abt_div{
+	position: relative;
+	display: flex;
+	height: auto;
+}
+#abt_img{
+	min-height: 500px;
+	width: 50%;
+	background-color: blue;
+}
+#abt_section{
+	min-height: 500px;
+	width: 50%;
+	background-color: green;
+}
+#abt_section_bottom{
+	min-height: 200px;
+	width: 100%;
+	background-color: red;
 }
 .about_footer{
 	position: relative;
@@ -212,6 +235,52 @@ body{
 	height: auto;
 	min-height: 700px;
 	background-color: white;
+}
+.portfolio_navigation{
+	position: relative;
+	height: 60px;
+	background-color: black;
+	width: 100%;
+}
+.pn_nav{
+	list-style: none;
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+.pn_nav_item{
+	display: inline-block;
+	padding: 18px 0px 18px 16px;
+}
+.pn_button{
+	border: none;
+	color: white;
+	background-color: black;
+	outline: none;
+	font-weight: 300;
+	font-size: 15px;
+	transition: .25s;
+}
+#pn_search{
+	width: 0px;
+	background-color: black;
+	outline: none;
+	border: none;
+	font-size: 14px;
+	font-weight: 300;
+	transition: .25s;
+}
+.pn_button:focus{
+	color: #0698FF;
+}
+#pn_search_button:focus + #pn_search{
+	width: 150px;
+	border-bottom: 1px solid white;
+}
+#pn_search:focus{
+	width: 150px;
+	color: white;
+	border-bottom: 1px solid #0698FF;
 }
 #contact_parallax{
 	background-image: url(../images/Work3.JPG);
@@ -274,6 +343,11 @@ footer h5{
 	font-weight: 300;
 }
 /* responsive breakpoints*/
+@media only screen
+and (max-width: 490px){
+	/*---- TODO ----*/
+}
+
 @media only screen 
 and (max-width: 500px){
 	.about_footer{
