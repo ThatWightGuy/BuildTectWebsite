@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- other stylesheets  -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 		<!-- *******************  -->
 
 		<!-- default stylesheets  -->
@@ -40,14 +41,7 @@
 			</div>
 			<div class="about_content" id="about_container">
 				<div class="ac_content">
-					<div class="about_h1_container">
-						<h1 class="about_h1">At Build Tect Building Designs, we specialize in designing <a href="#" class="about_h1_link tect">new homes</a>, <a href="#" class="about_h1_link tect">remodels and additions</a>, and <a href="#" class="about_h1_link tect">tenant improvments</a> in the Southern California area.</h1>
-					</div>
-					<div class="about_bt">
-						<div class="abt_div" id="abt_img"></div>
-						<div class="abt_div" id="abt_section"></div>
-						<div class="abt_div" id="abt_section_bottom"></div>
-					</div>
+					
 				</div>
 				<footer class="about_footer">
 					<div class="af_box">
@@ -79,19 +73,41 @@
 			<div class="portfolio_content" id="portfolio_container">
 				<div class="portfolio_navigation">
 					<ul class="pn_nav">
-						<li class="pn_nav_item">
+						<li class="pn_nav_item" id="residential">
 							<button class="pn_button" id="pn_residential">residential</button>
 						</li>
-						<li class="pn_nav_item">
+						<li class="pn_nav_item" id="commercial">
 							<button class="pn_button" id="pn_commercial">commercial</button>
 						</li>
-						<li class="pn_nav_item">
+						<li class="pn_nav_item" id="all">
 							<button class="pn_button" id="pn_all">all</button>
 						</li>
-						<li class="pn_nav_item">
+						<li class="pn_nav_item" id="search">
 							<div>
 								<button class="pn_button" id="pn_search_button"><i class="fa fa-search" aria-hidden="true"></i></button>
-								<input id="pn_search" type="text" name="search" placeholder="search for job">
+								<input id="pn_search" type="text" name="search" placeholder="(not functional)">
+							</div>
+						</li>
+						<li class="pn_nav_item" id="dropdown">
+							<i class="fa fa-bars pn_button" id="pn_dropdown"></i>
+							<div class="pd_menu">
+								<ul class="pndm_nav">
+									<li class="pnd_nav_item">
+										<button class="pn_button" id="pn_residential">residential</button>
+									</li>
+									<li class="pnd_nav_item">
+										<button class="pn_button" id="pn_commercial">commercial</button>
+									</li>
+									<li class="pnd_nav_item">
+										<button class="pn_button" id="pn_all">all</button>
+									</li>
+									<li class="pnd_nav_item">
+										<div class="pn_item">
+											<button class="pn_button" id="pn_search_button"><i class="fa fa-search" aria-hidden="true"></i></button>
+											<input id="pn_search" type="text" name="search" placeholder="(not functional yet)">
+										</div>
+									</li>
+								</ul>
 							</div>
 						</li>
 					</ul>

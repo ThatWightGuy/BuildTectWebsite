@@ -5,7 +5,7 @@ html{
 body{
 	padding: 0;
 	margin: 0;
-	font-family: sans-serif;
+	font-family: 'Roboto';
 }
 .home{
 	position: relative;
@@ -145,48 +145,17 @@ body{
 	max-width: 1000px;
 	margin: auto;
 }
-.about_h1_container{
-	position: relative;
-	display: flex;
-	height: auto;
-	min-height: 250px;
-}
-.about_h1{
-	text-align: center;
-	margin: auto;
-	font-weight: 300;
-	font-size: 31px;
-	padding: 40px;
-}
 .about_bt{
 	position: relative;
 	display: flex;
 	height: auto;
 	-webkit-flex-flow: row wrap;
-	min-height: 700px;
+	min-height: 800px;
 	width: 100%;
-	background-color: grey;
+	margin: 50px 0;
+	/*background-color: grey;*/
 }
-.abt_div{
-	position: relative;
-	display: flex;
-	height: auto;
-}
-#abt_img{
-	min-height: 500px;
-	width: 50%;
-	background-color: blue;
-}
-#abt_section{
-	min-height: 500px;
-	width: 50%;
-	background-color: green;
-}
-#abt_section_bottom{
-	min-height: 200px;
-	width: 100%;
-	background-color: red;
-}
+
 .about_footer{
 	position: relative;
 	display: flex;
@@ -282,6 +251,9 @@ body{
 	color: white;
 	border-bottom: 1px solid #0698FF;
 }
+#dropdown{
+	display: none;
+}
 #contact_parallax{
 	background-image: url(../images/Work3.JPG);
 }
@@ -342,10 +314,54 @@ footer h5{
 	color: white;
 	font-weight: 300;
 }
+
 /* responsive breakpoints*/
 @media only screen
-and (max-width: 490px){
-	/*---- TODO ----*/
+and (max-width: 489px){
+	#residential, #commercial, #all, #search{
+		display: none;
+	}
+	#dropdown{
+		display: block;
+		width: 44px;
+	}
+	.pd_menu{
+		height: 0;
+		width: 100%;
+		overflow: hidden;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		background-color: black;
+	}
+	#pn_dropdown{
+		display: inline-block;
+		padding: 4.5px;
+	}
+	#dropdown:hover .fa-bars{
+		color: #0698FF;
+	}
+	#dropdown:hover .pd_menu{
+		transition: .5s;
+		height: 188px;
+	}
+	#dropdown:not(hover) .pd_menu{
+		transition: .5s;
+		height: 0;
+	}
+	.pndm_nav{
+		margin: 0;
+		padding: 0;
+	}
+	.pnd_nav_item{
+		padding: 12px 0px 12px 16px;
+	}
+	#pn_search_button:focus + #pn_search{
+		width: 87%;
+	}
+	#pn_search:focus{
+		width: 86%;
+	}
 }
 
 @media only screen 
