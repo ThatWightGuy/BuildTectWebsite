@@ -228,7 +228,6 @@ body{
 	outline: none;
 	font-weight: 300;
 	font-size: 15px;
-	transition: .25s;
 }
 #pn_search{
 	width: 0px;
@@ -237,6 +236,13 @@ body{
 	border: none;
 	font-size: 14px;
 	font-weight: 300;
+	transition: .25s;
+}
+.pn_button:hover{
+	transition: .25s;
+	color: #0698FF;
+}
+.pn_button:not(hover), .pn_button:not(focus){
 	transition: .25s;
 }
 .pn_button:focus{
