@@ -41,7 +41,7 @@
 			</div>
 			<div class="about_content" id="about_container">
 				<div class="ac_content">
-					
+					<h1 class="coming_soon_h1">about page coming soon</h1>
 				</div>
 				<footer class="about_footer">
 					<div class="af_box">
@@ -74,18 +74,20 @@
 				<div class="portfolio_navigation">
 					<ul class="pn_nav">
 						<li class="pn_nav_item" id="residential">
-							<button class="pn_button" id="pn_residential">residential</button>
+							<button class="pn_button" id="pn_residential" onclick="toHeaderResidential()">residential</button>
 						</li>
 						<li class="pn_nav_item" id="commercial">
-							<button class="pn_button" id="pn_commercial">commercial</button>
+							<button class="pn_button" id="pn_commercial" onclick="toHeaderCommercial()">commercial</button>
 						</li>
 						<li class="pn_nav_item" id="all">
-							<button class="pn_button" id="pn_all">all</button>
+							<button class="pn_button" id="pn_all" onclick="toHeaderAll()">all</button>
 						</li>
 						<li class="pn_nav_item" id="search">
-							<div>
+							<div class="p_item">
 								<button class="pn_button" id="pn_search_button"><i class="fa fa-search" aria-hidden="true"></i></button>
-								<input id="pn_search" type="text" name="search" placeholder="(not functional)">
+								<form id="portfolio_form" target="#portfolio_container" action="Javascript:search()">
+									<input class="pn_search" id="notdrop_search" type="text" name="search" placeholder="search portfolio" autocomplete="off">
+								</form>
 							</div>
 						</li>
 						<li class="pn_nav_item" id="dropdown">
@@ -93,24 +95,85 @@
 							<div class="pd_menu">
 								<ul class="pndm_nav">
 									<li class="pnd_nav_item">
-										<button class="pn_button" id="pn_residential">residential</button>
+										<button class="pn_button" id="pn_residential" onclick="toHeaderResidential()">residential</button>
 									</li>
 									<li class="pnd_nav_item">
-										<button class="pn_button" id="pn_commercial">commercial</button>
+										<button class="pn_button" id="pn_commercial" onclick="toHeaderCommercial()">commercial</button>
 									</li>
 									<li class="pnd_nav_item">
-										<button class="pn_button" id="pn_all">all</button>
+										<button class="pn_button" id="pn_all" onclick="toHeaderAll()">all</button>
 									</li>
 									<li class="pnd_nav_item">
-										<div class="pn_item">
+										<div class="p_item2">
 											<button class="pn_button" id="pn_search_button"><i class="fa fa-search" aria-hidden="true"></i></button>
-											<input id="pn_search" type="text" name="search" placeholder="(not functional yet)">
+											<form id="portfolio_form" target="#portfolio_container" action="Javascript:search()">
+												<input class="pn_search" id="drop_search" type="text" name="search" placeholder="search portfolio" autocomplete="off">
+											</form>
 										</div>
 									</li>
 								</ul>
 							</div>
 						</li>
 					</ul>
+					<script type="text/javascript">
+						function toHeaderAll(){
+							document.getElementById("pis_h1_all_projects").style.display="block";
+							document.getElementById("pis_h1_residential").style.display="none";
+							document.getElementById("pis_h1_commercial").style.display="none";
+							document.getElementById("pis_h1_search_result").style.display="none";
+						}
+
+						function toHeaderResidential(){
+							document.getElementById("pis_h1_all_projects").style.display="none";
+							document.getElementById("pis_h1_residential").style.display="block";
+							document.getElementById("pis_h1_commercial").style.display="none";
+							document.getElementById("pis_h1_search_result").style.display="none";
+						}
+
+						function toHeaderCommercial(){
+							document.getElementById("pis_h1_all_projects").style.display="none";
+							document.getElementById("pis_h1_residential").style.display="none";
+							document.getElementById("pis_h1_commercial").style.display="block";
+							document.getElementById("pis_h1_search_result").style.display="none";
+						}
+
+						function search(){
+							var input;
+
+							if(window.innerWidth < 490){
+								input = document.getElementById("drop_search").value;
+							}
+							else{
+								input = document.getElementById("notdrop_search").value;
+							}
+							
+							if(input != ""){
+								document.getElementById("pis_h1_all_projects").style.display="none";
+								document.getElementById("pis_h1_residential").style.display="none";
+								document.getElementById("pis_h1_commercial").style.display="none";
+								document.getElementById("pis_h1_search_result").style.display="block";
+								document.getElementById("pis_search_input").innerHTML = input;
+
+								//implement search filtering here...
+							}
+							else{
+								toHeaderAll();
+							}
+						}
+					</script>
+				</div>
+				<div class="portfolio_items_section">
+					<div class="pis_header">
+						<h1 class="pis_h1">
+							<span id="pis_h1_all_projects">all <span class="tect">projects</span></span>
+							<span id="pis_h1_residential" style="display: none;">residential <span class="tect">projects</span></span>
+							<span id="pis_h1_commercial" style="display: none;">commercial <span class="tect">projects</span></span>
+							<span id="pis_h1_search_result" style="display: none;">search results: <span class="tect" id="pis_search_input"></span></span>
+						</h1>
+					</div>
+					<div class="pis_gallery">
+						<h1 class="coming_soon_h1">gallery coming soon</h1>
+					</div>
 				</div>
 			</div>
 		</div>
