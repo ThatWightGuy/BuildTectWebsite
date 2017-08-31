@@ -19,9 +19,11 @@
 	<body>
 		<!-- POPUPS -->
 		<div class="portfolio_popup" id="pp_default1">
-			<div class="pp_info_container">
+			<div class="pp_margin_div"></div>
+			<div class="pp_info_container" id="ppc_default1">
 				
 			</div>
+			<div class="pp_margin_div"></div>
 			<button class="pp_exit" onclick="hidePortfolioPopUp('default1')">x</button>
 		</div>
 		<!-- Home Section -->
@@ -186,18 +188,8 @@
 							<div class="pis_gallery_inner_item">
 								<div class="pis_item_hover">
 									<div class="pis_ih_box">
-										<h3 class="pis_ih_header">(insert address here)</h5>
+										<h3 class="pis_ih_header">(working)</h5>
 										<button class="pis_ih_button" onclick="showPortfolioPopUp('default1')">more info</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="pis_gallery_item" id="">
-							<div class="pis_gallery_inner_item">
-								<div class="pis_item_hover">
-									<div class="pis_ih_box">
-										<h3 class="pis_ih_header">(insert address here)</h5>
-										<button class="pis_ih_button" onclick="showPortfolioPopUp('default2')">more info</button>
 									</div>
 								</div>
 							</div>
@@ -206,10 +198,16 @@
 					<script type="text/javascript">
 						function showPortfolioPopUp(address){
 							var id = "pp_" + address;
-							document.getElementById(id).style.display="flex";
+							var id2 = "ppc_" + address;
+							if(address != ""){
+								document.body.style.overflow="hidden";
+								document.getElementById(id).style.overflow="scroll";
+								document.getElementById(id).style.display="flex";
+							}
 						}
 						function hidePortfolioPopUp(address){
 							var id = "pp_" + address;
+							document.body.style.overflow="scroll";
 							document.getElementById(id).style.display="none";
 						}
 					</script>
