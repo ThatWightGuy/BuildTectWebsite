@@ -404,13 +404,94 @@ body{
 .pp_info_container{
 	position: relative;
 	width: 900px;
-	min-height: 600px;
+	min-height: 506px;
 	background-color: white;
 	margin: auto;
 }
 .pp_margin_div{
 	min-height: 60px;
 	width: 100%;
+}
+.ppic_overlay_container{
+	position: absolute;
+	display: flex;
+	z-index: 1000000;
+	width: 900px;
+	height: 506px;
+	background-color: grey;
+}
+.ppic_nav{
+	padding: 20px;
+	margin: 0 auto;
+}
+.ppicn_item{
+	list-style: none;
+	display: inline-block;
+}
+.ppicn_button{
+	outline: none;
+	background-color: transparent;
+	border: none;
+	font-size: 20px;
+	padding: 0 20px;
+	-webkit-transition: .25s;
+	transition: .25s;
+	color: white;
+	font-weight: 300;
+	opacity: .4;
+}
+.ppicn_button:hover{
+	opacity: 1;
+}
+.ppic_nextpic{
+	position: absolute;
+	display: flex;
+	left: 0;
+	height: 506px;
+}
+.ppic_prevpic{
+	position: absolute;
+	display: flex;
+	right: 0;
+	height: 506px;
+}
+.ppic_gallery_nav{
+	-webkit-transition: .25s;
+	transition: .25s;
+	height: 40px;
+	width: 40px;
+	margin: auto;
+	font-size: 40px;
+	outline: none;
+	background-color: transparent;
+	border: none;
+	color: white;
+	opacity: .4;
+}
+.ppic_gallery_nav:hover{
+	opacity: 1;
+}
+.ppic_description{
+	position: absolute;
+	-webkit-transition: .5s;
+	transition: .25s;
+	right: 0;
+	z-index: 1000001;
+	width: 0;
+	height: 506px;
+	background-color: black;
+	overflow: hidden;
+}
+.ppic_image_gallery{
+	position: absolute;
+	-webkit-transition: .5s;
+	transition: .25s;
+	bottom: 0;
+	z-index: 1000001;
+	width: 900px;
+	height: 0;
+	background-color: black;
+	overflow: hidden;
 }
 
 #contact_parallax{
@@ -491,8 +572,23 @@ and (max-width: 1200px){
 and (max-width: 1000px){
 	.pp_info_container{
 		width: auto;
-		min-height: 60vw;
+		min-height: 51vw;
 		margin: auto 50px;
+	}
+	.ppic_overlay_container{
+		z-index: 1000000;
+		width: 100%;
+		height: 51vw;
+		background-color: grey;
+	}
+	.ppic_nextpic{
+		height: 51vw
+	}
+	.ppic_prevpic{
+		height: 51vw
+	}
+	.ppic_description{
+		height: 51vw;
 	}
 }
 @media only screen
@@ -589,6 +685,9 @@ and (max-width: 700px){
 	}
 	.cc_content{
 		width: 100%;
+	}
+	.ppic_overlay_container{
+		display: none;
 	}
 }
 

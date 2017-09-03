@@ -20,12 +20,84 @@
 		<!-- POPUPS -->
 		<div class="portfolio_popup" id="pp_default1">
 			<div class="pp_margin_div"></div>
-			<div class="pp_info_container" id="ppc_default1">
-				
+			<div class="pp_info_container">
+				<div class="ppic_overlay_container">
+					<ul class="ppic_nav">
+						<li class="ppicn_item"><button class="ppicn_button" onclick="showPopupGallery('default1')">gallery</button></li>
+						<li class="ppicn_item"><button class="ppicn_button" onclick="showPopupInfo('default1')">info</button></li>
+					</ul>
+					<div class="ppic_nextpic">
+						<button class="ppic_gallery_nav">
+							<i class="fa fa-angle-left" aria-hidden="true"></i>
+						</button>
+					</div>
+					<div class="ppic_prevpic">
+						<button class="ppic_gallery_nav">
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
+				<div class="ppic_description" id="ppd_default1">
+					<button class="pp_exit" onclick="hidePopupInfo('default1')">x</button>
+				</div>
+				<div class="ppic_image_gallery" id="ppg_default1">
+					<button class="pp_exit" onclick="hidePopupGallery('default1')">x</button>
+				</div>
 			</div>
 			<div class="pp_margin_div"></div>
-			<button class="pp_exit" onclick="hidePortfolioPopUp('default1')">x</button>
+			<button class="pp_exit" onclick="hideEverything('default1')">x</button>
 		</div>
+		<script type="text/javascript">
+
+			function popup(address){
+				showPortfolioPopUp(address);
+			}
+
+			function showPortfolioPopUp(address){
+				var id = "pp_" + address;
+				if(address != ""){
+					document.body.style.overflow="hidden";
+					document.getElementById(id).style.overflow="scroll";
+					document.getElementById(id).style.display="flex";
+				}
+			}
+
+			function hidePortfolioPopUp(address){
+				var id = "pp_" + address;
+				document.body.style.overflow="scroll";
+				document.getElementById(id).style.display="none";
+			}
+			function hideEverything(address){
+				hidePortfolioPopUp(address);
+				hidePopupInfo(address);
+				hidePopupGallery(address);
+			}
+
+			function showPopupGallery(address){
+				hidePopupInfo(address);
+				
+				var id = "ppg_" + address;
+				document.getElementById(id).style.height = "200px"
+			}
+
+			function hidePopupGallery(address){
+				var id = "ppg_" + address;
+				document.getElementById(id).style.height = "0px"
+			}
+
+			function showPopupInfo(address){
+				hidePopupGallery(address);
+
+				var id = "ppd_" + address;
+				document.getElementById(id).style.width = "300px";
+			}
+
+			function hidePopupInfo(address){
+				var id = "ppd_" + address;
+				document.getElementById(id).style.width = "0px";
+			}
+
+		</script>
 		<!-- Home Section -->
 		<div class="home">
 			<div class="navigation">
@@ -79,9 +151,6 @@
 				<div class="overlay_div"><!-- blank div --></div>
 				<h1 class="parallax_header">port<span class="tect">follio</span></h1>
 			</div>
-			<!-- popups -->
-			
-			<!-- popups -->
 			<div class="portfolio_content" id="portfolio_container">
 				<div class="portfolio_navigation">
 					<ul class="pn_nav">
@@ -189,28 +258,12 @@
 								<div class="pis_item_hover">
 									<div class="pis_ih_box">
 										<h3 class="pis_ih_header">(working)</h5>
-										<button class="pis_ih_button" onclick="showPortfolioPopUp('default1')">more info</button>
+										<button class="pis_ih_button" onclick="popup('default1')">more info</button>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<script type="text/javascript">
-						function showPortfolioPopUp(address){
-							var id = "pp_" + address;
-							var id2 = "ppc_" + address;
-							if(address != ""){
-								document.body.style.overflow="hidden";
-								document.getElementById(id).style.overflow="scroll";
-								document.getElementById(id).style.display="flex";
-							}
-						}
-						function hidePortfolioPopUp(address){
-							var id = "pp_" + address;
-							document.body.style.overflow="scroll";
-							document.getElementById(id).style.display="none";
-						}
-					</script>
 				</div>
 			</div>
 		</div>
