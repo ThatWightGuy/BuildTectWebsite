@@ -77,12 +77,14 @@
 				hidePopupInfo(address);
 				
 				var id = "ppg_" + address;
-				document.getElementById(id).style.height = "200px"
+				document.getElementById(id).style.height = "150px";
+				setTimeout(function(){document.getElementById(id).style.transition = "0s"}, 100);
 			}
 
 			function hidePopupGallery(address){
 				var id = "ppg_" + address;
-				document.getElementById(id).style.height = "0px"
+				document.getElementById(id).style.transition = ".5s";
+				document.getElementById(id).style.height = "0px";
 			}
 
 			function showPopupInfo(address){
@@ -90,10 +92,12 @@
 
 				var id = "ppd_" + address;
 				document.getElementById(id).style.width = "300px";
+				setTimeout(function(){document.getElementById(id).style.transition = "0s"}, 100);
 			}
 
 			function hidePopupInfo(address){
 				var id = "ppd_" + address;
+				document.getElementById(id).style.transition = ".5s";
 				document.getElementById(id).style.width = "0px";
 			}
 
@@ -260,6 +264,9 @@
 										<h3 class="pis_ih_header">(working)</h5>
 										<button class="pis_ih_button" onclick="popup('default1')">more info</button>
 									</div>
+								</div>
+								<div class="pis_ih_image">
+									<img class="pis_gallery_image" src="images/thefonz.jpg">
 								</div>
 							</div>
 						</div>
